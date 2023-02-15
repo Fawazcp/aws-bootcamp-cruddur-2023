@@ -14,3 +14,6 @@
 - The account you created for the first time is actually **ROOT** account
 - Create an **MFA** for best practice
 - Create a **group** and name the group as **admin** , provide permssion as **AdministratorAccess**
+- Create a **user** and add user to the **admin group**
+- Do not use root account in production
+- Once you create **IAM** user always login with IAM user credentials  
