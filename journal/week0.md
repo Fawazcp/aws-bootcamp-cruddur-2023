@@ -17,3 +17,4 @@
 - Create a **user** and add user to the **admin group**
 - Do not use root account in production
 - Once you create **IAM** user always login with IAM user credentials  
+- Enable **MFA** to the IAM user as well
