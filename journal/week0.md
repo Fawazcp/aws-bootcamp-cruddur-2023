@@ -58,6 +58,7 @@ I created an billing alarm using cloudwatch and created a SNS topic for getting 
 |Watched Chirag's Week 0 - Spend Considerations   | ✔     |    |
 | Watched Ashish's Week 0 - Security Considerations | ✔      |   |
 |Recreate Logical Architectual Diagram in Lucid Charts|✔      |   |
+|Recreate Conceptual Diagram in Lucid Charts|✔      |   |
 | Create an Admin User| ✔      |   |
 | Use CloudShell | ✔   |   |
 | Generate AWS Credentials |✔      |   |
