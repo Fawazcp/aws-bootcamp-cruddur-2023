@@ -45,3 +45,5 @@ msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi
 I created an billing alarm using cloudwatch and created a SNS topic for getting alert in email when the budget reach more than my threshold 
 <img width="954" alt="cloudwatch" src="https://user-images.githubusercontent.com/111639918/219319511-f84a37e8-12bf-4069-a299-3f3e19079d02.png">
 
+
+|Homework| |Completed|
