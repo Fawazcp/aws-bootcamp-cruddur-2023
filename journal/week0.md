@@ -33,9 +33,9 @@ I created a budget of 10$ because I can't afford more than that. I also set an t
 
 ## Install AWS CLI
 
-To install AWS CLI i reffered the [AWS documentation](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html). I am using window so I installed using command prompt.
+To install AWS CLI i refered the [AWS documentation](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html). I am using window so I installed using command prompt.
 If you are using windows then use the command below 
 ```
 msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi
 ```
-
+<img width="454" alt="aws cli" src="https://user-images.githubusercontent.com/111639918/219315525-d5900afa-1fa6-4970-b308-b4d00a088efa.png">
