@@ -20,3 +20,7 @@
 - Enable **MFA** to the IAM user as well
 
 ## Create a Budget
+
+I created a budget of 10$ because I can't afford more than that. I also create an SNS topic with a threshold. When my budget reach 5$ I will receive a notification alert in my email. 
+
+<img width="856" alt="budget alert" src="https://user-images.githubusercontent.com/111639918/219307160-b06eb1a2-491f-431d-a05b-8610f952efde.png">
