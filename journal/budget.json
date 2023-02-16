@@ -1,0 +1,27 @@
+{
+    "BudgetLimit": {
+        "Amount": "100",
+        "Unit": "USD"
+    },
+    "BudgetName": "Monthly10USDBudget",
+    "BudgetType": "COST",
+    "CostFilters": {},
+    "CostTypes": {
+        "IncludeRefund": false,
+        "IncludeCredit": false,
+        "IncludeUpfront": true,
+        "IncludeRecurring": true,
+        "IncludeOtherSubscription": true,
+        "IncludeTax": true,
+        "IncludeSupport": true,
+        "IncludeDiscount": true,
+        "IncludeSubscription": true,
+        "UseAmortized": false,
+        "UseBlended": false
+    },
+    "TimePeriod": {
+        "Start": 1675209600000,
+        "End": 3706473600000
+    },
+    "TimeUnit": "Monthly"
+}
