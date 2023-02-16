@@ -29,4 +29,13 @@ I created a budget of 10$ because I can't afford more than that. I also set an t
  I want to receive all my bills and free tier usage alert in my email. To enable this option you can refer the image below
  
 <img width="924" alt="enable billing" src="https://user-images.githubusercontent.com/111639918/219311533-c9027b92-f4e1-4982-beac-71bb9555c5ba.png">
+`
+
+## Install AWS CLI
+
+To install AWS CLI i reffered the [AWS documentation](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html). I am using window so I installed using command prompt.
+If you are using windows then use the command below 
+```
+msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi
+```
 
