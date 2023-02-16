@@ -39,3 +39,9 @@ If you are using windows then use the command below
 msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi
 ```
 <img width="454" alt="aws cli" src="https://user-images.githubusercontent.com/111639918/219315525-d5900afa-1fa6-4970-b308-b4d00a088efa.png">
+
+## Create Billing Alarm with SNS topic
+
+I created an billing alarm using cloudwatch and created a SNS topic for getting alert in email when the budget reach more than my threshold 
+<img width="954" alt="cloudwatch" src="https://user-images.githubusercontent.com/111639918/219319511-f84a37e8-12bf-4069-a299-3f3e19079d02.png">
+
