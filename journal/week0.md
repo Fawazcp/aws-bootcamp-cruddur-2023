@@ -49,13 +49,13 @@ I created an billing alarm using cloudwatch and created a SNS topic for getting 
 
 | Homework      | Completed     | Not Completed  |
 | ------------- |:-------------:| -----:|
-| Watched Week 0 - Live Streamed Video   | YES |  |
-|Watched Chirag's Week 0 - Spend Considerations   | YES     |    |
-| Watched Ashish's Week 0 - Security Considerations | YES      |   |
-|Recreate Logical Architectual Diagram in Lucid Charts| YES      |   |
-| Create an Admin User| YES      |   |
-| Use CloudShell | YES      |   |
-| Generate AWS Credentials | YES      |   |
-| Installed AWS CLI | YES      |   |
-| Create a Billing Alarm | YES      |   |
-| Create a Budget | YES      |   |
+| Watched Week 0 - Live Streamed Video   | ✔ |  |
+|Watched Chirag's Week 0 - Spend Considerations   | ✔     |    |
+| Watched Ashish's Week 0 - Security Considerations | ✔      |   |
+|Recreate Logical Architectual Diagram in Lucid Charts|✔      |   |
+| Create an Admin User| ✔      |   |
+| Use CloudShell | ✔   |   |
+| Generate AWS Credentials |✔      |   |
+| Installed AWS CLI | ✔   |   |
+| Create a Billing Alarm | ✔      |   |
+| Create a Budget | ✔  |   |
