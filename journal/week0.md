@@ -21,6 +21,12 @@
 
 ## Create a Budget
 
-I created a budget of 10$ because I can't afford more than that. I also create an SNS topic with a threshold. When my budget reach 5$ I will receive a notification alert in my email. 
+I created a budget of 10$ because I can't afford more than that. I also set an threshold alert When my budge,t reach 5$ I will receive a notification alert in my email. 
 
 <img width="856" alt="budget alert" src="https://user-images.githubusercontent.com/111639918/219307160-b06eb1a2-491f-431d-a05b-8610f952efde.png">
+
+## Enable billing preference
+ I want to receive all my bills and free tier usage alert in my email. To enable this option you can refer the image below
+ 
+<img width="924" alt="enable billing" src="https://user-images.githubusercontent.com/111639918/219311533-c9027b92-f4e1-4982-beac-71bb9555c5ba.png">
+
