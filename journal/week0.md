@@ -8,8 +8,9 @@
 
 ## Conceptual diagram
 
-[My lucid concetual diagram](https://lucid.app/documents/view/425b8e17-bbc8-432b-943c-d158f575cb11)
- ![image](https://user-images.githubusercontent.com/111639918/219398891-5fd21fb8-f624-4083-80f9-59d0da25c739.png)
+[My lucid concetual diagram](https://lucid.app/lucidchart/425b8e17-bbc8-432b-943c-d158f575cb11/view?page=0_0&invitationId=inv_d55c3236-a78e-41ec-b558-13bbd5e85007#)
+
+![conceptual diagram](https://user-images.githubusercontent.com/111639918/219750230-2931856c-12f2-477d-8c9f-32bb8c17b5b3.jpg)
 
 
 ## **Create an AWS account**
