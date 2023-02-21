@@ -8,6 +8,12 @@
 
 <img width="944" alt="docker app" src="https://user-images.githubusercontent.com/111639918/220321453-6bc92fcf-f5b8-463a-bc58-b8e63d7d9d0e.png">
 
+Push Docker images to Docker hub
+```
+docker images 
+
+```
+
 
 # Next Homework
 
