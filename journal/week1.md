@@ -7,7 +7,7 @@
 **__Here is the outcome_👇_**
 <img width="937" alt="real app" src="https://user-images.githubusercontent.com/111639918/220439622-75e043be-26fb-4b0e-99ef-5dc8e6722289.png">
 
-[**Create Dockerub account**](https://hub.docker.com/)
+- [**Create Dockerhub account**](https://hub.docker.com/)
 
 Push Docker images to Docker hub
 
