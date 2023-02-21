@@ -1,6 +1,6 @@
 # Week 1 — App Containerization
 
-- Watched live stream video from YouTube 3 times to unnderstand how things works because  I am a beginner in Docker
+- Watched live stream video from YouTube 3 times to understand how things works because  I am a beginner in Docker
 - Followed the steps and scripts along with Andrew Brown and successfully created the app in container
 
 See the snapshot below👇
