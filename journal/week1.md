@@ -9,11 +9,10 @@
 
 - [**Create Dockerhub account**](https://hub.docker.com/)
 
-Push Docker images to Docker hub
+**Push Docker images to Docker hub**
 
 
-
-
+To do that👇
 
 Open gitpod or CMD enter the below command
 ```
