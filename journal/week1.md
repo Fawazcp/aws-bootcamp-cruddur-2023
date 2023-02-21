@@ -23,7 +23,6 @@ docker push DOCKERHUB_USERNAME/REPOSITORY_NAME:TAG
 ```
 <img width="956" alt="docker images" src="https://user-images.githubusercontent.com/111639918/220432612-c7d63c18-5859-4a95-a915-44d1f2270b53.png">
 
-<img width="959" alt="backend image docker" src="https://user-images.githubusercontent.com/111639918/220435205-dc088870-e37c-452d-9d2c-5caa052cd975.png">
 
 - **After use the push command go to dokcerhub account and verify it**;
 
