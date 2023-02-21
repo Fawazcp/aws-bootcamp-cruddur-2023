@@ -16,7 +16,7 @@ Open gitpod or CMD enter the below command
 ```
 docker login
 docker images
-docker images [OPTIONS] [REPOSITORY[:TAG]]
+docker tag IMAGE_NAME DOCKERHUB_USERNAME/REPOSITORY_NAME:TAG
 docker push DOCKERHUB_USERNAME/REPOSITORY_NAME:TAG
 ```
 After use the push command go to dokcerhub account and verify it
