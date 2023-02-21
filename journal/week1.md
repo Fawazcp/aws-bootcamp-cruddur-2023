@@ -11,3 +11,4 @@
 
 Next Homework
 👀watch [Week 1 - DynamoDB and Postgres vs Docker](https://youtu.be/CbQNMaa6zTg) 
+We have to install the PSQL client, we also install the PSQL Database Explorer
