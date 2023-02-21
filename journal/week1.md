@@ -10,7 +10,7 @@
 
 Push Docker images to Docker hub
 
-[**Create an Dockerhub acoount**](https://hub.docker.com/)
+[**Create an Dockerhub account**](https://hub.docker.com/)
 
 Open gitpod or CMD enter the below command
 ```
@@ -19,6 +19,8 @@ docker images
 docker images [OPTIONS] [REPOSITORY[:TAG]]
 docker push DOCKERHUB_USERNAME/REPOSITORY_NAME:TAG
 ```
+After use the push command go to dokcerhub account and verify it
+
 
 
 # Next Homework
