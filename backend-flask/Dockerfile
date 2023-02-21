@@ -1,3 +1,7 @@
+#exampro bootcamp project docker
+
+#FRONTEND_URL="*" BACKEND_URL="*" docker run --rm -p 4567:4567 -it backend-flask
+
 FROM python:3.10-slim-buster
 
 # inside container
