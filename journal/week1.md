@@ -9,8 +9,16 @@
 <img width="944" alt="docker app" src="https://user-images.githubusercontent.com/111639918/220321453-6bc92fcf-f5b8-463a-bc58-b8e63d7d9d0e.png">
 
 Push Docker images to Docker hub
+
+[**Create an Dockerhub acoount**](https://hub.docker.com/)
+
+Open gitpod or CMD enter the below command
 ```
-docker images 
+docker login
+docker images
+docker images [OPTIONS] [REPOSITORY[:TAG]]
+docker push DOCKERHUB_USERNAME/REPOSITORY_NAME:TAG
+
 
 ```
 
