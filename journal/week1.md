@@ -18,8 +18,6 @@ docker login
 docker images
 docker images [OPTIONS] [REPOSITORY[:TAG]]
 docker push DOCKERHUB_USERNAME/REPOSITORY_NAME:TAG
-
-
 ```
 
 
