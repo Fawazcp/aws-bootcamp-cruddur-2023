@@ -46,8 +46,8 @@ I created notification feature in my crudder app followed the instructions by[ A
 
  **Frontend endpoint**👇
  
-<img width="931" alt="notification error" src="https://user-images.githubusercontent.com/111639918/221121574-35aa503f-46c2-4a21-a639-3f85f51ddf09.png">
 
+https://cdn.discordapp.com/attachments/1077281208368648202/1078426117993668698/blank.png
 **Backend endpoint**👇
 
 <img width="614" alt="notification backend endpoint" src="https://user-images.githubusercontent.com/111639918/221121596-ee9a555e-9cdc-4e7e-ab3d-e5ad9b950ff3.png">
