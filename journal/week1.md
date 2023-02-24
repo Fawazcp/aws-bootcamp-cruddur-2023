@@ -78,10 +78,31 @@ When I check the port ```4567``` it was private. I made ```4567``` port as publi
 👀watched [Week 1 - DynamoDB and Postgres vs Docker](https://youtu.be/CbQNMaa6zTg)
 
 -  Followed instructions and Created DynamoDB table. To create DynamoDB table I used command from ** DynamoDB local** https://github.com/100DaysOfCloud/challenge-dynamodb-local
+
+```
+# add this file into your docker-compose.yml
+
+services:
+  dynamodb-local:
+    # https://stackoverflow.com/questions/67533058/persist-local-dynamodb-data-in-volumes-lack-permission-unable-to-open-databa
+    # We needed to add user:root to get this working.
+    user: root
+    command: "-jar DynamoDBLocal.jar -sharedDb -dbPath ./data"
+    image: "amazon/dynamodb-local:latest"
+    container_name: dynamodb-local
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./docker/dynamodb:/home/dynamodblocal/data"
+    working_dir: /home/dynamodblocal
+    
+```    
+
 -  Installed postgresql using the below command
 
 ```
 #updated this command in my .gitpod.yml file and installed postgresql client using terminal
+
   -  name: postgres
      init: |
       - curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gpg
