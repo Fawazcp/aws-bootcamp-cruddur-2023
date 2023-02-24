@@ -78,5 +78,7 @@ When I check the port ```4567``` it was private. I made ```4567``` port as publi
 ```
 psql -Upostgres --host localhost 
 ```
+![image](https://user-images.githubusercontent.com/111639918/221193595-47a33d84-5fb5-4526-8c21-5300b224135d.png)
+
 
 We have to install the PSQL client, we also install the PSQL Database Explorer
