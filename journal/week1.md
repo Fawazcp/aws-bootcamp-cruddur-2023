@@ -125,4 +125,22 @@ psql -Upostgres --host localhost
 ![image](https://user-images.githubusercontent.com/111639918/221193595-47a33d84-5fb5-4526-8c21-5300b224135d.png)
 
 
+### Summary
+
+| Homework      | Completed     | Not Completed  |
+| ------------- |:-------------:| -----:|
+| Watch How to Ask for Technical Help   | ✔ |  |
+|Watched Grading Homework Summaries   | ✔     |    |
+| Watched Week 1 - Live Streamed Video | ✔      |   |
+|Remember to Commit Your Code|✔      |   |
+|Watcked Chirag's Week 1 - Spending Considerations|✔      |   |
+| Watched Ashish's Week 1 - Container Security Considerations|      | ❌  |
+| Containerize Application (Dockerfiles, Docker Compose)  | ✔   |   |
+| Document the Notification Endpoint for the OpenAI Document |✔      |   |
+| 	Write a Flask Backend Endpoint for Notifications| ✔   |   |
+| Write a React Page for Notifications | ✔      |   |
+|Run DynamoDB Local Container and ensure it works  | ✔  |   |
+| 	Run Postgres Container and ensure it works | ✔  |   |
+
+
 
