@@ -3,7 +3,7 @@
 - Watched live stream video from YouTube 3 times to understand how things works because  I am a beginner in Docker
 - Watched video on YouTube about Docker for beginners by [Techworld with Nana](https://youtu.be/pg19Z8LL06w) to get an idea about **Docker**
 - Followed the steps and scripts along with Andrew Brown and successfully created the app in container
-- To create this watch Week1 live streaming recording on [YouTube](https://www.youtube.com/live/zJnNe5Nv4tE?feature=share) and follow instruction [from omenking
+- To create this watch Week1 live streaming recording on [YouTube](https://www.youtube.com/live/zJnNe5Nv4tE?feature=share) and follow instructions from [omenking
 /aws-bootcamp-cruddur-2023](https://github.com/omenking/aws-bootcamp-cruddur-2023/blob/week-1/journal/week1.md) Githib repo
 
 **__Here is the outcome_👇_**
@@ -64,7 +64,7 @@ After correcting the file name my crudder app was working. But there's nothing i
 
 <img width="935" alt="notification without feed" src="https://user-images.githubusercontent.com/111639918/221124821-d625f088-6171-4189-ad21-9f5e75dc4826.png">
 
-When I check the port ```4567``` it was private. I made this port as public then everyhting worked fine.
+When I check the port ```4567``` it was private. I made ```4567``` port as public then everyhting worked fine.
 
 **Here is my notification feature (Backend and Front) after all troubleshooting** 👇
 <img width="942" alt="notification" src="https://user-images.githubusercontent.com/111639918/221125287-095098ea-19f4-4a07-9c1d-379be50689a1.png">
