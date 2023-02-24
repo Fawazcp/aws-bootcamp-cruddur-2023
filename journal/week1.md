@@ -73,7 +73,7 @@ When I check the port ```4567``` it was private. I made ```4567``` port as publi
 **Here is my notification feature (Backend and Front) after all troubleshooting** 👇
 <img width="942" alt="notification" src="https://user-images.githubusercontent.com/111639918/221125287-095098ea-19f4-4a07-9c1d-379be50689a1.png">
 
-- I addressed my error and troubleshooting that I followed to resolve the issue in the **week1-docker server**
+- I addressed my error and troubleshooting that I followed to resolve the issue in the Discord **week1-docker server**
 
 👀watched [Week 1 - DynamoDB and Postgres vs Docker](https://youtu.be/CbQNMaa6zTg)
 
