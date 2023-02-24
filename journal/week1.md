@@ -98,6 +98,10 @@ services:
     
 ```    
 
+![image](https://user-images.githubusercontent.com/111639918/221256196-4874696b-34ed-4f21-8b15-d6abf7928088.png)
+![image](https://user-images.githubusercontent.com/111639918/221256489-6217d0a9-f24c-4d90-a042-29a4b64801db.png)
+
+
 -  Installed postgresql using the below command
 
 ```
