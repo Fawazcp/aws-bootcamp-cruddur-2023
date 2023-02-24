@@ -73,4 +73,10 @@ When I check the port ```4567``` it was private. I made ```4567``` port as publi
 
 👀watch [Week 1 - DynamoDB and Postgres vs Docker](https://youtu.be/CbQNMaa6zTg)
 
+# Postgre command
+
+```
+psql -Upostgres --host localhost 
+```
+
 We have to install the PSQL client, we also install the PSQL Database Explorer
