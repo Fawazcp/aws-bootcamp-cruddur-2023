@@ -4,7 +4,7 @@
 - Watched video on YouTube about Docker for beginners by [Techworld with Nana](https://youtu.be/pg19Z8LL06w) to get an idea about **Docker**
 - Followed the steps and scripts along with Andrew Brown and successfully created the app in container
 - To create this watch Week1 live streaming recording on [YouTube](https://www.youtube.com/live/zJnNe5Nv4tE?feature=share) and follow instructions from [omenking
-/aws-bootcamp-cruddur-2023](https://github.com/omenking/aws-bootcamp-cruddur-2023/blob/week-1/journal/week1.md) Githib repo
+/aws-bootcamp-cruddur-2023](https://github.com/omenking/aws-bootcamp-cruddur-2023/blob/week-1/journal/week1.md) Github repo
 
 **__Here is the outcome_👇_**
 <img width="937" alt="real app" src="https://user-images.githubusercontent.com/111639918/220439622-75e043be-26fb-4b0e-99ef-5dc8e6722289.png">
@@ -16,7 +16,7 @@
 
 To do that👇
 
-Open gitpod or CMD enter the below command
+Open gitpod and enter the below command
 ```
 docker login
 docker images
@@ -38,7 +38,7 @@ docker push DOCKERHUB_USERNAME/REPOSITORY_NAME:TAG
 
 # Create the notification feature (Backend and Front)
 
-I created notification feature in my crudder app followed the instructions by Andrew Brown. But after adding the notification feed page my Frontend endpoint was not working . It shows me a blank screen but the backend endpoiny was working fine. Below I am sharing the snapshots.
+I created notification feature in my crudder app followed the instructions by[ Andrew Brown](https://youtu.be/k-_o0cCpksk). But after adding the notification feed page my Frontend endpoint was not working . It shows me a blank screen but the backend endpoint was working fine. Below I am sharing the snapshots.
 
  **Frontend endpoint**👇
  
@@ -56,9 +56,9 @@ I followed the instructions and opened my crudder app--> inspect--> network--> r
 
 ![error message](https://user-images.githubusercontent.com/111639918/221123432-bb65ceb8-3867-4598-98aa-125a4d00f3e0.png)
 
-Honestly I did'nt understood what this error is😅. I shared this error to one of the bootcamp candidate in Disord. She asked me to check my ```NotificationsFeedPage.js``` That time I saw instead of ```NotificationsFeedPage.js``` I saved the page as ```otificationsFeedPage.js``` 😅
+Honestly I did'nt understood what this error is😅. I shared this error to one of the bootcamp candidate on Disord. She asked me to check my ```NotificationsFeedPage.js``` That time I saw instead of ```NotificationsFeedPage.js``` I saved the page as ```otificationsFeedPage.js``` 😅
 
-After correcting the file name my crudder app was working. But there's nothing in the feed page 👇
+After correcting the file name my crudder app started working. But there's nothing in the feed page 👇
 
 
 
@@ -71,14 +71,29 @@ When I check the port ```4567``` it was private. I made ```4567``` port as publi
 
 - I addressed my error and troubleshooting that I followed to resolve the issue in the **week1-docker server**
 
-👀watch [Week 1 - DynamoDB and Postgres vs Docker](https://youtu.be/CbQNMaa6zTg)
+👀watched [Week 1 - DynamoDB and Postgres vs Docker](https://youtu.be/CbQNMaa6zTg)
 
-# Postgre command
+-  Followed instructions and Created DynamoDB table. To create DynamoDB table I used command from ** DynamoDB local** https://github.com/100DaysOfCloud/challenge-dynamodb-local
+-  Installed postgresql using the below command
 
+```
+#updated this command in my .gitpod.yml file and installed postgresql client using terminal
+  -  name: postgres
+     init: |
+      - curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gpg
+      - echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" |sudo tee  /etc/apt/sources.list.d/pgdg.list
+      - sudo apt update
+      - sudo apt install -y postgresql-client-13 libpq-dev
+ 
+ ```
+ 
+ In my gitpod **Postgresql** was not installed, so I installed postgresql from extensions and added a file. Then connected to Database server
+
+**To login to Postgre sql use thiscommand**
 ```
 psql -Upostgres --host localhost 
 ```
 ![image](https://user-images.githubusercontent.com/111639918/221193595-47a33d84-5fb5-4526-8c21-5300b224135d.png)
 
 
-We have to install the PSQL client, we also install the PSQL Database Explorer
+
