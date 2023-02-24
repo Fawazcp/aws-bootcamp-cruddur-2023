@@ -3,7 +3,7 @@
 - Watched live stream video from YouTube 3 times to understand how things works because  I am a beginner in Docker
 - Watched video on YouTube about Docker for beginners by [Techworld with Nana](https://youtu.be/pg19Z8LL06w) to get an idea about **Docker**
 - Followed the steps and scripts along with Andrew Brown and successfully created the app in container
-- To create this watch Week1 live streaming recordig on [YouTube](https://www.youtube.com/live/zJnNe5Nv4tE?feature=share) and follow instruction [from omenking
+- To create this watch Week1 live streaming recording on [YouTube](https://www.youtube.com/live/zJnNe5Nv4tE?feature=share) and follow instruction [from omenking
 /aws-bootcamp-cruddur-2023](https://github.com/omenking/aws-bootcamp-cruddur-2023/blob/week-1/journal/week1.md) Githib repo
 
 **__Here is the outcome_👇_**
