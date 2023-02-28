@@ -126,67 +126,38 @@ psql -Upostgres --host localhost
 
 # Install Docker in EC2 instance
 
-**1- Launch an Ec2 instance using AWS management console. While lanuching an instance add the below user-data.**
+**1- Launch an Ec2 instance using AWS management console. While lanuching an instance search `ami-05e7fa5a3b6085a75` this ami-id under marketplace and launch.**
+
+![image](https://user-images.githubusercontent.com/111639918/221941526-5d37a242-f13c-4f44-8fa6-4a71afb55e03.png)
+
+
+- This image has by default docker installed.
+- Selected t2.micro as instance type which is `free-tier` eligible 
+- Connect the instance and run this command to verify the docker installed
 
 ```
-#!/bin/bash
 
-# This will update the ec2 instance 
-sudo yum update -y
+[ec2-user@ip-172-31-56-107 ~]$ docker --version
+Docker version 20.10.17, build 100c701
+[ec2-user@ip-172-31-56-107 ~]$
 
-# This will install docker into ec2 instence
-sudo yum install docker -y
 
-# This will install pythong3-pip to install docker compose
-sudo yum install python3-pip
-
-# This will install docker-compose
-sudo pip3 install docker-compose
-
-# This specifies that docker service will run every time when this ec2 instence starts
-sudo systemctl enable docker.service
-
-# This command will run the docker services
-sudo systemctl start docker.se
-```
-**2- Add these inbound rules in the security group**
-
-![image](https://user-images.githubusercontent.com/111639918/221926805-a516075d-b1de-4450-bfa8-41653fd79d5e.png)
-
-**3- Connect instance or open cloudshell and run the below command**
-```
-# To give ec2-user permission to use docker without root (BEST PRACTICE)
-sudo usermod -a -G docker ec2-user
-id ec2-user
-newgrp docker
-
-# This environment variable will be used by docker-compose file 
-export ips=$(curl http://169.254.169.254/latest/meta-data/public-ipv4)
-
-# Volumes for frontend and backend
-mkdir $HOME/backend-flask
-mkdir $HOME/frontend-react-js
-
-# To download docker-compose file directly from my github repo (PS IT IS MY GITHUB REPO)
-sudo yum install git -y
-git clone https://github.com/Fawazcp/docker-compose-cruddur.git
-
-# Gitclone command will make a directory/ changing the directory 
-cd docker-compose-crudder
-
-# Putting the file to home directory
-mv docker-compose.yml $HOME/docker-compose.yml
-
-# Changing the directory to Home
-cd ..
-
-# RUN THE CONTAINERS TO ENJOY CRUDDER INSIDE EC2
-docker-compose up -d
 ```
 
-                 <enter>
+- **Login to dokcerhub using the below command**
+ 
+![image](https://user-images.githubusercontent.com/111639918/221943491-6287dd1e-0e86-4681-9190-e56efdb9f399.png)
 
+- **Pull the front-end and backend images using this command**
 
+```
+ docker image pull fawazcp/cruddur-backend:latest
+ 
+ docker image pull fawazcp/cruddur-frontend:latest      
+ 
+```
+
+![image](https://user-images.githubusercontent.com/111639918/221944329-5a100d3f-f273-4a46-8350-a66247f5729e.png)
 
 
 
@@ -199,7 +170,7 @@ docker-compose up -d
 | Watched Week 1 - Live Streamed Video | ✔      |   |
 |Remember to Commit Your Code|✔      |   |
 |Watcked Chirag's Week 1 - Spending Considerations|✔      |   |
-| Watched Ashish's Week 1 - Container Security Considerations|      | ❌  |
+| Watched Ashish's Week 1 - Container Security Considerations|    ✔  |   |
 | Containerize Application (Dockerfiles, Docker Compose)  | ✔   |   |
 | Document the Notification Endpoint for the OpenAI Document |✔      |   |
 | 	Write a Flask Backend Endpoint for Notifications| ✔   |   |
