@@ -2,6 +2,7 @@
 
 - Watched live stream video from YouTube 3 times to understand how things works because  I am a beginner in Docker
 - Watched video by Chirag about billing and free tier usage limit https://youtu.be/OAMHu1NiYoI
+- Watched Ashish's security consideration [video](https://www.youtube.com/watch?v=OjZz4D0B-cA&list=PLBfufR7vyJJ7k25byhRXJldB5AiwgNnWv&index=26)  
 - Watched video on YouTube about Docker for beginners by [Techworld with Nana](https://youtu.be/pg19Z8LL06w) to get an idea about **Docker**
 - Followed the steps and scripts along with Andrew Brown and successfully created the app in container
 - To create this watch Week1 live streaming recording on [YouTube](https://www.youtube.com/live/zJnNe5Nv4tE?feature=share) and follow instructions from [omenking
