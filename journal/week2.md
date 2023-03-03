@@ -70,4 +70,33 @@ RequestsInstrumentor().instrument()
 
 ![image](https://user-images.githubusercontent.com/111639918/222543399-7e55b41d-aaa8-4506-b49d-1acf34818cc9.png)
 
+- Add  a tracer in `home_activities.py`
+
+```
+from opentelemetry import trace
+tracer = trace.get_tracer("home.Activities") # this will show up in attribute of field library
+```
+
+```
+with tracer.start_as_current_span("home-activites-mock-data"):
+    span = trace.get_current_span() # this will get whatever span it's in
+    now = datetime.now(timezone.utc).astimezone()
+    span.set_attribute("app.now", now.isoformat()) # this app.now attribute will show inside this span "home-activites-mock-data" , its data is the time now in ISO foramt.
+```
+    
+    
+    
+![image](https://user-images.githubusercontent.com/111639918/222809320-82a419e2-cb06-443f-944e-02f6bc4171c0.png)
+
+- **Docker compose UP**
+
+When I do docker compose up I am not getting any trace in Honeycomb account instead getting an error says `Errno 111 connection refused`
+
+
+
+
+<img width="608" alt="honeycomb" src="https://user-images.githubusercontent.com/111639918/222810247-3b9439af-e383-4f2b-b328-c827c51c667f.png">
+
+Seems like issue with GitPod.  I searched about this error on chatgpt and google and got response says that maybe because of network issue. I also seeked help in Discord and there are bunch of people spend their time to help me but unfortunately no one coudn't find the solution. So I decided to move next challenge and try resolve this error after sometime.
+
 
