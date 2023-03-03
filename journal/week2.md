@@ -99,13 +99,19 @@ When I do docker compose up I am not getting any trace in Honeycomb account inst
 
 Seems like issue with GitPod.  I searched about this error on chatgpt and google and got response says that maybe because of network issue. I also seeked help in Discord and there are bunch of people spend their time to help me but unfortunately no one coudn't find the solution. So I decided to move next challenge and try resolve this error after sometime.
 
-- I deleted the dynamodb and postgresql scripts. After adding dynamodb and postgresql script in the docker file  I got the output
+
 
 ![image](https://user-images.githubusercontent.com/111639918/222811114-ccf24f65-4465-4930-8f23-8807493ffe7d.png)
+
+- I deleted the dynamodb and postgresql scripts. After adding dynamodb and postgresql script in the docker file  I got the output
 
 
 
 ![image](https://user-images.githubusercontent.com/111639918/222814748-47328391-14f4-48b1-9de4-0936123bad94.png)
+
+
+![image](https://user-images.githubusercontent.com/111639918/222816226-81cefdb1-17d3-4423-88f4-aac0e2e94c01.png)
+
 
 
 
