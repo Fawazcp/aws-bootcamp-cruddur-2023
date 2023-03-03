@@ -21,6 +21,7 @@ from opentelemetry.instrumentation.requests import RequestsInstrumentor
 from opentelemetry.exporter.otlp.proto.http.trace_exporter import OTLPSpanExporter
 from opentelemetry.sdk.trace import TracerProvider
 from opentelemetry.sdk.trace.export import BatchSpanProcessor
+from opentelemetry.sdk.trace.export import ConsoleSpanExporter, SimpleSpanProcessor
 
 
 # honeycomb---
@@ -28,12 +29,19 @@ from opentelemetry.sdk.trace.export import BatchSpanProcessor
 provider = TracerProvider()
 processor = BatchSpanProcessor(OTLPSpanExporter())
 provider.add_span_processor(processor)
+
+# Additional step # Show this in the logs within the backend-flask app (STDOUT) # This is used when andrew debug why the logs wasn't being sent to HoneyComb because he used different API key
+simple_processor = SimpleSpanProcessor(ConsoleSpanExporter())
+provider.add_span_processor(simple_processor)
+
+
 trace.set_tracer_provider(provider)
 tracer = trace.get_tracer(__name__)
 
+app = Flask(__name__)
 # honeycomb---
 # Initialize automatic instrumentation with Flask
-app = Flask(__name__)
+
 FlaskInstrumentor().instrument_app(app)
 RequestsInstrumentor().instrument()
 
