@@ -103,7 +103,7 @@ Seems like issue with GitPod.  I searched about this error on chatgpt and google
 
 ![image](https://user-images.githubusercontent.com/111639918/222811114-ccf24f65-4465-4930-8f23-8807493ffe7d.png)
 
-- I was deleted the dynamodb and postgresql scripts. After adding dynamodb and postgresql script in the docker file  I got the output
+- I realized that I removed the dynamodb and postgresql scripts from `docker-compose.yml` file. After adding dynamodb and postgresql script in the docker file  I got the output
 
 
 
