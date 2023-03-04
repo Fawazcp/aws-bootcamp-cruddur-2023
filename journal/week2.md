@@ -116,7 +116,7 @@ Seems like issue with GitPod.  I searched about this error on chatgpt and google
 
 # Instrument XRay
 
-- Watched Instrument X-ray video posted on [YouTube](https://youtu.be/n2DTsuBrD_A)
+- Watched Instrument X-ray video posted on [YouTube](https://youtu.be/n2DTsuBrD_A) by Andrew Brown
 
 **👇ADD this into `requirement.txt` file**
 
@@ -148,21 +148,36 @@ xray_recorder.configure(service='backend-flask', dynamic_naming=xray_url)
 
 ```
 {
-  "SamplingRule": {
-      "RuleName": "Cruddur",
-      "ResourceARN": "*",
-      "Priority": 9000,
-      "FixedRate": 0.1,
-      "ReservoirSize": 5,
-      "ServiceName": "Cruddur",
-      "ServiceType": "*",
-      "Host": "*",
-      "HTTPMethod": "*",
-      "URLPath": "*",
-      "Version": 1
+    "SamplingRule": {
+        "RuleName": "Cruddur",
+        "ResourceARN": "*",
+        "Priority": 9000,
+        "FixedRate": 0.1,
+        "ReservoirSize": 5,
+        "ServiceName": "backend-flask",
+        "ServiceType": "*",
+        "Host": "*",
+        "HTTPMethod": "*",
+        "URLPath": "*",
+        "Version": 1
+    }
   }
-}
 ```
+
+- Add this command. Make sure you are in to backend repo
+```
+FLASK_ADDRESS="https://4567-${GITPOD_WORKSPACE_ID}.${GITPOD_WORKSPACE_CLUSTER_HOST}"
+aws xray create-group \
+   --group-name "Cruddur" \
+   --filter-expression "service(\"backend-flask\")"
+```   
+Run this command
+```
+aws xray create-sampling-rule --cli-input-json file://aws/json/xray.json
+```
+
+
+   
 
 
 
