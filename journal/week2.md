@@ -173,8 +173,33 @@ aws xray create-group \
 ```   
 Run this command
 ```
+cd ..
 aws xray create-sampling-rule --cli-input-json file://aws/json/xray.json
 ```
+![image](https://user-images.githubusercontent.com/111639918/222924382-517d2260-641a-468f-aaf3-3c4707ed7bef.png)
+
+ - To verify the group is created go to AWS management console--> Xray --> Sampling rules
+
+![image](https://user-images.githubusercontent.com/111639918/222924448-f6cdd136-73e9-407d-b4af-d46e1b504e79.png)
+
+### Install Daemon Service 
+- To install Daemon Service follow [AWS Documentation](https://docs.aws.amazon.com/xray/latest/devguide/xray-daemon.html)
+- **Add Deamon Service to `docker-compose.yml`**
+
+```
+ xray-daemon:
+    image: "amazon/aws-xray-daemon"
+    environment:
+      AWS_ACCESS_KEY_ID: "${AWS_ACCESS_KEY_ID}"
+      AWS_SECRET_ACCESS_KEY: "${AWS_SECRET_ACCESS_KEY}"
+      AWS_REGION: "us-east-1"
+    command:
+      - "xray -o -b xray-daemon:2000"
+    ports:
+      - 2000:2000/udp
+  ```    
+
+
 
 
    
