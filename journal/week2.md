@@ -114,5 +114,55 @@ Seems like issue with GitPod.  I searched about this error on chatgpt and google
 
 ![image](https://user-images.githubusercontent.com/111639918/222821504-77d2c27b-b8f7-4ddf-9463-ee2d32293d02.png)
 
+# Instrument XRay
+
+- Watched Instrument X-ray video posted on [YouTube](https://youtu.be/n2DTsuBrD_A)
+
+**👇ADD this into `requirement.txt` file**
+
+```
+aws-xray-sdk
+```
+
+```
+cd backend-flask 
+pip install -r requirement.txt
+```
+
+**ADD this into app.py**
+```
+# X-RAY -------
+from aws_xray_sdk.core import xray_recorder
+from aws_xray_sdk.ext.flask.middleware import XRayMiddleware
+```
+
+```
+# X-RAY -------
+xray_url = os.getenv("AWS_XRAY_URL")
+xray_recorder.configure(service='backend-flask', dynamic_naming=xray_url)
+```
+
+<img width="841" alt="image" src="https://user-images.githubusercontent.com/111639918/222921459-b9ec25f2-2248-4608-86bb-3fcd6b092305.png">
+
+- **Add aws/json/xray.json**
+
+```
+{
+  "SamplingRule": {
+      "RuleName": "Cruddur",
+      "ResourceARN": "*",
+      "Priority": 9000,
+      "FixedRate": 0.1,
+      "ReservoirSize": 5,
+      "ServiceName": "Cruddur",
+      "ServiceType": "*",
+      "Host": "*",
+      "HTTPMethod": "*",
+      "URLPath": "*",
+      "Version": 1
+  }
+}
+```
+
 
 
