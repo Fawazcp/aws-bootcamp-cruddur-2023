@@ -198,6 +198,8 @@ aws xray create-sampling-rule --cli-input-json file://aws/json/xray.json
     ports:
       - 2000:2000/udp
   ```    
+  <img width="579" alt="image" src="https://user-images.githubusercontent.com/111639918/222924845-5da76ec2-5a41-4405-88cc-555af2806bda.png">
+
 
 
 
