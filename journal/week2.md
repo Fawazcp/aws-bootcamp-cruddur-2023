@@ -178,7 +178,10 @@ aws xray create-sampling-rule --cli-input-json file://aws/json/xray.json
 ```
 ![image](https://user-images.githubusercontent.com/111639918/222924382-517d2260-641a-468f-aaf3-3c4707ed7bef.png)
 
- - To verify the group is created go to AWS management console--> Xray --> Sampling rules
+ - To verify the group is created go to AWS management console--> Xray --> Groups
+
+![image](https://user-images.githubusercontent.com/111639918/222951312-b2c2f0fe-de9a-4512-a720-2e2479fe9f64.png)
+
 
 ![image](https://user-images.githubusercontent.com/111639918/222924448-f6cdd136-73e9-407d-b4af-d46e1b504e79.png)
 
