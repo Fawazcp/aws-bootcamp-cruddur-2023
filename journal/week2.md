@@ -189,7 +189,7 @@ aws xray create-sampling-rule --cli-input-json file://aws/json/xray.json
 ![image](https://user-images.githubusercontent.com/111639918/222924448-f6cdd136-73e9-407d-b4af-d46e1b504e79.png)
 
 ### Install Daemon Service 
-- To install Daemon Service follow [AWS Documentation](https://docs.aws.amazon.com/xray/latest/devguide/xray-daemon.html)
+
 - **Add Deamon Service to `docker-compose.yml`**
 
 ```
