@@ -213,7 +213,9 @@ aws xray create-sampling-rule --cli-input-json file://aws/json/xray.json
 
   ![image](https://user-images.githubusercontent.com/111639918/223091967-98409546-ea71-4639-8df0-8abd75d1fcd4.png)
   
-  - I seeked help in Discord and one of the bootcamp participant noticed that I haven't ser my aws credentials in my `docker-compose` file. After adding my credentials in my x-ray data traces are available 👇
+  - I seeked help in Discord and one of the bootcamp participant noticed that I haven't set my aws credentials in my `docker-compose` file. After adding my credentials in my x-ray data traces are available 👇
+
+
   ![image](https://user-images.githubusercontent.com/111639918/223102521-89139b78-a6cc-4127-bf9f-ebb83b5b4162.png)
 
 
