@@ -350,8 +350,7 @@ def rollbar_test():
 
 <img width="581" alt="image" src="https://user-images.githubusercontent.com/111639918/223211604-28c8d7b8-e869-45c4-a9d8-19fa353c2f3a.png">
 
-
-    <img width="955" alt="image" src="https://user-images.githubusercontent.com/111639918/223213199-852dc587-45fd-4925-b5e7-7ff82ead4225.png">
+ <img width="955" alt="image" src="https://user-images.githubusercontent.com/111639918/223213199-852dc587-45fd-4925-b5e7-7ff82ead4225.png">
 
 ![image](https://user-images.githubusercontent.com/111639918/223213957-db989eaa-8232-4bf0-b8a2-d728fb42e603.png)
 
