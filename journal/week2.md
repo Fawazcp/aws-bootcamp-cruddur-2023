@@ -222,8 +222,60 @@ aws xray create-sampling-rule --cli-input-json file://aws/json/xray.json
 
   
   ![image](https://user-images.githubusercontent.com/111639918/223103539-b3b29175-a490-40f3-aef7-1799dc83871e.png)
+  
+  # Cloudwatch Logs
+  
+  - To implement cloudwatch logs I watched video posted on [YouTube by Andrew Brown](https://youtu.be/ipdFizZjOF4)
 
+To install **watchtower** add this command into requirements.txt
 
+```
+watchtower
+```
+cd backend-flask/
+
+```
+pip installl -r requirments.txt
+```
+
+Open **app.py** and the below command 
+
+```
+import watchtower
+import logging
+from time import strftime
+```
+
+```
+# Configuring Logger to Use CloudWatch
+LOGGER = logging.getLogger(__name__)
+LOGGER.setLevel(logging.DEBUG)
+console_handler = logging.StreamHandler()
+cw_handler = watchtower.CloudWatchLogHandler(log_group='cruddur')
+LOGGER.addHandler(console_handler)
+LOGGER.addHandler(cw_handler)
+LOGGER.info("some message")
+```
+
+<img width="752" alt="image" src="https://user-images.githubusercontent.com/111639918/223186757-97c5cc04-cda7-4c88-ad8b-6ea535bedf9a.png">
+
+- Set the env var for docker-compose.yml
+
+```
+      AWS_DEFAULT_REGION: "${AWS_DEFAULT_REGION}"
+      AWS_ACCESS_KEY_ID: "${AWS_ACCESS_KEY_ID}"
+      AWS_SECRET_ACCESS_KEY: "${AWS_SECRET_ACCESS_KEY}"
+```      
+
+<img width="592" alt="image" src="https://user-images.githubusercontent.com/111639918/223191374-889707f8-dcbe-43d0-af74-aa7b45e1c40c.png">
+
+- docker-compose up
+- Open backend port and refresh
+-  Go to cloudwatch log group
+
+![image](https://user-images.githubusercontent.com/111639918/223199749-24d96055-250f-400c-b203-d314ed670b0d.png)
+
+![image](https://user-images.githubusercontent.com/111639918/223200085-a7f83769-f073-43d7-a00c-435f3a09d91c.png)
 
 
 
