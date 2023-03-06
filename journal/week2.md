@@ -279,8 +279,95 @@ LOGGER.info("some message")
 
  # 4️⃣Rollbar
 
+- Create a rollbar account. To create a rollbar account watch video posted on [YouTube by **Shala Warner**](https://youtu.be/Lpm6oAP3Fb0) or 
+-  https://rollbar.com/
+-  Watch  video posted on YouTube by Andrew Brown about [rollbar](https://youtu.be/xMBDAb5SEU4)
+
+- Add these into requirements.txt file
+
+```
+blinker
+rollbar
+```
+
+cd backend-flask/
+```
+pip install -r requirements.txt
+```
+
+- Set access token
+
+```
+export ROLLBAR_ACCESS_TOKEN=""
+gp env ROLLBAR_ACCESS_TOKEN=""
+```
+- To confirm the rollbar token exported
+
+```
+env | grep ROLLBAR
+```
+
+- Add these in to app.py
+
+```
+import os
+import rollbar
+import rollbar.contrib.flask
+from flask import got_request_exception
+```
+
+```
+rollbar_access_token = os.getenv('ROLLBAR_ACCESS_TOKEN')
+@app.before_first_request
+def init_rollbar():
+    """init rollbar module"""
+    rollbar.init(
+        # access token
+        rollbar_access_token,
+        # environment name
+        'production',
+        # server root directory, makes tracebacks prettier
+        root=os.path.dirname(os.path.realpath(__file__)),
+        # flask already sets up logging
+        allow_logging_basic_config=False)
+
+    # send exceptions from `app` to rollbar, using flask's signal system.
+    got_request_exception.connect(rollbar.contrib.flask.report_exception, app)
+ ```
+ 
+ ```
+ @app.route('/rollbar/test')
+def rollbar_test():
+    rollbar.report_message('Hello World!', 'warning')
+    return "Hello World!"
+```
+
+- docker-compose up
+
+![image](https://user-images.githubusercontent.com/111639918/223208808-dd02972b-56ee-434a-9fe9-1b25438612f4.png)
+
+- Add rollbar access token into `docker-compose.yml` file
+
+<img width="581" alt="image" src="https://user-images.githubusercontent.com/111639918/223211604-28c8d7b8-e869-45c4-a9d8-19fa353c2f3a.png">
 
 
+    <img width="955" alt="image" src="https://user-images.githubusercontent.com/111639918/223213199-852dc587-45fd-4925-b5e7-7ff82ead4225.png">
+
+![image](https://user-images.githubusercontent.com/111639918/223213957-db989eaa-8232-4bf0-b8a2-d728fb42e603.png)
+
+
+### Summary
+
+| Homework      | Completed     | Not Completed  |
+| ------------- |:-------------:| -----:|
+| Watch Week 2 Live-Stream Video   | ✔ |  |
+|	Watch Chirag Week 2 - Spending Considerations | ✔     |    |
+| Watched Ashish's Week 2 - Observability Security Considerations | ✔      |   |
+|Instrument Honeycomb with OTEL|✔      |   |
+|Instrument AWS X-Ray|✔      |   |
+|Instrument AWS X-Ray Subsegments|    ✔  |   |
+| Configure custom logger to send to CloudWatch Logs  | ✔   |   |
+|Integrate Rollbar and capture and error |✔      |   |
 
 
 
