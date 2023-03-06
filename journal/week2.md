@@ -217,6 +217,9 @@ aws xray create-sampling-rule --cli-input-json file://aws/json/xray.json
 
 
   ![image](https://user-images.githubusercontent.com/111639918/223102521-89139b78-a6cc-4127-bf9f-ebb83b5b4162.png)
+  
+  ![image](https://user-images.githubusercontent.com/111639918/223103539-b3b29175-a490-40f3-aef7-1799dc83871e.png)
+
 
 
 
