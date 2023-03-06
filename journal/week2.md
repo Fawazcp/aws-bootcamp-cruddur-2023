@@ -2,7 +2,7 @@
 
 - Watched (Week 2) - Distributed Tracing live stream on [YouTube](https://www.youtube.com/live/2GD9xCzRId4?feature=share)
 
-1️⃣# Create Honeycomb account
+# 1️⃣Create Honeycomb account
 To create honeycomb account watch the video posted by **Shala Warner** in her [YouTube channel]( https://youtu.be/7IwtVLfSD0o)
 
 # Step 1
@@ -114,7 +114,7 @@ Seems like issue with GitPod.  I searched about this error on chatgpt and google
 
 ![image](https://user-images.githubusercontent.com/111639918/222821504-77d2c27b-b8f7-4ddf-9463-ee2d32293d02.png)
 
-2️⃣# Instrument XRay
+# 2️⃣Instrument XRay
 
 - Watched Instrument X-ray video posted on [YouTube](https://youtu.be/n2DTsuBrD_A) by Andrew Brown
 
@@ -223,7 +223,7 @@ aws xray create-sampling-rule --cli-input-json file://aws/json/xray.json
   
   ![image](https://user-images.githubusercontent.com/111639918/223103539-b3b29175-a490-40f3-aef7-1799dc83871e.png)
   
- 3️⃣ # Cloudwatch Logs
+ # 3️⃣ Cloudwatch Logs
   
   - To implement cloudwatch logs I watched video posted on [YouTube by Andrew Brown](https://youtu.be/ipdFizZjOF4)
 
@@ -277,7 +277,7 @@ LOGGER.info("some message")
 
 ![image](https://user-images.githubusercontent.com/111639918/223200085-a7f83769-f073-43d7-a00c-435f3a09d91c.png)
 
-4️⃣ # Rollbar
+ # 4️⃣Rollbar
 
 
 
