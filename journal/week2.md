@@ -205,6 +205,14 @@ aws xray create-sampling-rule --cli-input-json file://aws/json/xray.json
       - 2000:2000/udp
   ```    
   <img width="579" alt="image" src="https://user-images.githubusercontent.com/111639918/222924845-5da76ec2-5a41-4405-88cc-555af2806bda.png">
+  
+  # Error
+  
+  - When I do docker-compose up the data is not getting traced. I am getting an error saying NoCredentialProviders
+
+
+  ![image](https://user-images.githubusercontent.com/111639918/223091967-98409546-ea71-4639-8df0-8abd75d1fcd4.png)
+
 
 
 
