@@ -32,7 +32,7 @@ Amplify.configure({
     // identityPoolId: process.env.REACT_APP_IDENTITY_POOL_ID, // REQUIRED - Amazon Cognito Identity Pool ID
     region: process.env.REACT_APP_AWS_PROJECT_REGION,           // REQUIRED - Amazon Cognito Region
     userPoolId: process.env.REACT_APP_AWS_USER_POOLS_ID,         // OPTIONAL - Amazon Cognito User Pool ID
-    userPoolWebClientId: process.env.REACT_APP_AWS_USER_POOLS_WEB_CLIENT_ID,   // OPTIONAL - Amazon Cognito Web Client ID (26-char alphanumeric string)
+    userPoolWebClientId: process.env.REACT_APP_CLIENT_ID,   // OPTIONAL - Amazon Cognito Web Client ID (26-char alphanumeric string)
   }
 });
 ```
@@ -80,7 +80,6 @@ const checkAuth = async () => {
 
 ```
 import { Auth } from 'aws-amplify';
-
 ```
 
 ```
@@ -93,4 +92,43 @@ const signOut = async () => {
   }
 }
 ```
+
+### SignIn page
+
+Update the code
+```
+import { Auth } from 'aws-amplify';
+```
+
+
+<img width="449" alt="image" src="https://user-images.githubusercontent.com/111639918/223538232-0e1486ca-3d9d-495e-851b-d0103490fbbd.png">
+
+```
+const onsubmit = async (event) => {
+  setErrors('')
+  event.preventDefault();
+  try {
+    Auth.signIn(email, password)
+      .then(user => {
+        localStorage.setItem("access_token", user.signInUserSession.accessToken.jwtToken)
+        window.location.href = "/"
+      })
+      .catch(err => { console.log('Error!', err) });
+  } catch (error) {
+    if (error.code == 'UserNotConfirmedException') {
+      window.location.href = "/confirm"
+    }
+    setErrors(error.message)
+  }
+  return false
+}
+
+``` 
+
+![image](https://user-images.githubusercontent.com/111639918/223541294-e7c2fbb0-85ea-4538-804e-fa71ac50f5cc.png)
+
+![image](https://user-images.githubusercontent.com/111639918/223544952-380765c5-25f2-4a7d-99eb-2ea137850fc5.png)
+
+  
+
 
