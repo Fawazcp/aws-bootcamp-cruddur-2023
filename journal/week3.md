@@ -147,7 +147,7 @@ aws cognito-idp admin-set-user-password \
 <img width="199" alt="image" src="https://user-images.githubusercontent.com/111639918/223804716-e375941e-997f-4bc2-9154-bb0acc583073.png">
 
 
-- Update SighUp page
+### Update SighUp page
 
 ```
 # enter this code in `SignUpPage.js`
