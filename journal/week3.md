@@ -129,6 +129,17 @@ const onsubmit = async (event) => {
 
 <img width="512" alt="image" src="https://user-images.githubusercontent.com/111639918/223691905-230f27c2-e6e9-4c46-b41e-0fec09beb3c3.png">
 
+- Run this command to force change password for aws cognito https://stackoverflow.com/questions/40287012/how-to-change-user-status-force-change-password
+
+```
+aws cognito-idp admin-set-user-password \
+  --user-pool-id <your-user-pool-id> \
+  --username <username> \
+  --password <password> \
+  --permanent
+```
+
+
   
 
 
