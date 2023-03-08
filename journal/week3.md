@@ -234,8 +234,47 @@ const onsubmit = async (event) => {
 ![image](https://user-images.githubusercontent.com/111639918/223827821-f32d5d74-3415-43e7-974b-0aba432b2fc4.png)
 
 
+- Confirm in **Cognito** the user has been created
 
-ada
+<img width="714" alt="image" src="https://user-images.githubusercontent.com/111639918/223831159-9e848588-1e08-4bd2-bb33-8798a0892029.png">
+
+### Password Recovery
+
+- Go to `RecoverPage.js` and update the below code
+
+```
+import { Auth } from 'aws-amplify';
+```
+
+```
+const onsubmit_send_code = async (event) => {
+  event.preventDefault();
+  setErrors('')
+  Auth.forgotPassword(username)
+  .then((data) => setFormState('confirm_code') )
+  .catch((err) => setErrors(err.message) );
+  return false
+}
+```
+
+```
+const onsubmit_confirm_code = async (event) => {
+  event.preventDefault();
+  setErrors('')
+  if (password == passwordAgain){
+    Auth.forgotPasswordSubmit(username, code, password)
+    .then((data) => setFormState('success'))
+    .catch((err) => setCognitoErrors(err.message) );
+  } else {
+    setErrors('Passwords do not match')
+  }
+  return false
+}
+```
+
+
+![image](https://user-images.githubusercontent.com/111639918/223835172-8fa90733-0710-45fe-8c99-30c2214c9086.png)
+
 
 
 
