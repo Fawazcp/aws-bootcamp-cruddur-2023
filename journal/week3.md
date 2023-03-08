@@ -93,7 +93,10 @@ const signOut = async () => {
 }
 ```
 
+
 ### SignIn page
+
+- Watched video posted on YouTube uploaded in [**ExamPro** channel](https://youtu.be/T4X4yIzejTc)
 
 Update the code
 ```
