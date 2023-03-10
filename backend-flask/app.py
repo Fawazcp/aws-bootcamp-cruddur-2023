@@ -4,6 +4,8 @@ from flask_cors import CORS, cross_origin
 import os
 import sys
 
+from flask_awscognito import AWSCognitoAuthentication
+
 from services.home_activities import *
 from services.notifications_activities import *
 from services.user_activities import *
@@ -62,6 +64,11 @@ xray_url = os.getenv("AWS_XRAY_URL")
 xray_recorder.configure(service='backend-flask', dynamic_naming=xray_url)
 
 app = Flask(__name__)
+ 
+app.config['AWS_COGNITO_USER_POOL_ID'] = os.getenv("AWS_COGNITO_USER_POOL_ID")
+app.config['AWS_COGNITO_USER_POOL_CLIENT_ID'] = os.getenv("AWS_COGNITO_USER_POOL_CLIENT_ID")
+
+aws_auth = AWSCognitoAuthentication(app)
 
 # X-RAY -------
 XRayMiddleware(app, xray_recorder)
@@ -77,8 +84,8 @@ origins = [frontend, backend]
 cors = CORS(
   app, 
   resources={r"/api/*": {"origins": origins}},
-  expose_headers="location,link",
-  allow_headers="content-type,if-modified-since",
+  headers=['Content-Type', 'Authorization'], 
+  expose_headers='Authorization',
   methods="OPTIONS,GET,HEAD,POST"
 )
 
@@ -149,12 +156,12 @@ def data_create_message():
 
 @app.route("/api/activities/home", methods=['GET'])
 @xray_recorder.capture('activities_home')
+@aws_auth.authentication_required
 def data_home():
-  print('AUTH HEADER----', file=sys.stdout)
-  print(
-    request.headers.get('Authorization')
-  )
   data = HomeActivities.run()
+  claims = aws_auth.claims
+  app.logger.debug('claims')
+  app.logger.debug(claims)
   return data, 200
 
 @app.route("/api/activities/notifications", methods=['GET'])
