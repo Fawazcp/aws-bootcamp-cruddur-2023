@@ -4,8 +4,6 @@ from flask_cors import CORS, cross_origin
 import os
 import sys
 
-from flask_awscognito import AWSCognitoAuthentication
-
 from services.home_activities import *
 from services.notifications_activities import *
 from services.user_activities import *
@@ -65,10 +63,6 @@ xray_recorder.configure(service='backend-flask', dynamic_naming=xray_url)
 
 app = Flask(__name__)
  
-app.config['AWS_COGNITO_USER_POOL_ID'] = os.getenv("AWS_COGNITO_USER_POOL_ID")
-app.config['AWS_COGNITO_USER_POOL_CLIENT_ID'] = os.getenv("AWS_COGNITO_USER_POOL_CLIENT_ID")
-
-aws_auth = AWSCognitoAuthentication(app)
 
 # X-RAY -------
 XRayMiddleware(app, xray_recorder)
