@@ -431,12 +431,13 @@ class CognitoJwtToken:
         self._check_audience(claims)
 
         self.claims = claims
+        return claim
    ```     
         
   - Go to **`app.py`** and update the below code
 
 ```
-from lib.cognito_token_verification import CognitoTokenVerification
+from lib.cognito_jwt_token import CognitoJwtToken
 ```
 
 ```
