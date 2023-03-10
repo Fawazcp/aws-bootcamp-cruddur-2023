@@ -15,6 +15,8 @@ from services.messages import *
 from services.create_message import *
 from services.show_activity import *
 
+from lib.cognito_token_verification import CognitoTokenVerification
+
 # honeycomb------
 from opentelemetry import trace
 from opentelemetry.instrumentation.flask import FlaskInstrumentor
@@ -62,8 +64,13 @@ xray_url = os.getenv("AWS_XRAY_URL")
 xray_recorder.configure(service='backend-flask', dynamic_naming=xray_url)
 
 app = Flask(__name__)
- 
 
+cognito_jwt_token = CognitoJwtToken(
+  user_pool_id=os.getenv("AWS_COGNITO_USER_POOL_ID"),
+  user_pool_client_id=os.getenv("AWS_COGNITO_USER_POOL_CLIENT_ID"),
+  region=os.getenv("AWS_DEFAULT_REGION")
+)
+ 
 # X-RAY -------
 XRayMiddleware(app, xray_recorder)
 
@@ -150,12 +157,17 @@ def data_create_message():
 
 @app.route("/api/activities/home", methods=['GET'])
 @xray_recorder.capture('activities_home')
-@aws_auth.authentication_required
 def data_home():
-  data = HomeActivities.run()
-  claims = aws_auth.claims
+  access_token = CognitoJwtToken.extract_access_token(request.headers)
+  try:
+    claims = cognito_jwt_token.token_service.verify(access_token)
+  except TokenVerifyError as e:
+      _ = request.data
+      abort(make_response(jsonify(message=str(e)), 401))
+
   app.logger.debug('claims')
   app.logger.debug(claims)
+  data = HomeActivities.run()
   return data, 200
 
 @app.route("/api/activities/notifications", methods=['GET'])
