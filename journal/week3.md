@@ -508,5 +508,10 @@ def extract_access_token(request_headers):
 
 <img width="340" alt="image" src="https://user-images.githubusercontent.com/111639918/224415023-70ce1aea-ef24-4152-aa85-23db306f8003.png">
 
+Sign-out from the cruddur app and we cannot see the latest message we added
+
+![image](https://user-images.githubusercontent.com/111639918/224416345-4f47efb5-5951-4557-a169-8c2e3fe8d4dd.png)
+
+
 
 # Watch Week 3 -[ Exploring JWTs](https://youtu.be/nJjbI4BbasU)
