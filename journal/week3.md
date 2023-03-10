@@ -433,7 +433,7 @@ class CognitoJwtToken:
         self.claims = claims
    ```     
         
-  - Go to `app.py` and update the below code
+  - Go to **`app.py`** and update the below code
 
 ```
 from lib.cognito_token_verification import CognitoTokenVerification
@@ -446,6 +446,25 @@ cognito_jwt_token = CognitoJwtToken(
   region=os.getenv("AWS_DEFAULT_REGION")
 )
 ```
+
+```
+@app.route("/api/activities/home", methods=['GET'])
+@xray_recorder.capture('activities_home')
+def data_home():
+  access_token = CognitoJwtToken.extract_access_token(request.headers)
+  try:
+    cognito_jwt_token.token_service.verify(access_token)
+    self.claims = self.token_service.claims
+    g.cognito_claims = self.claims
+  except TokenVerifyError as e:
+      _ = request.data
+      abort(make_response(jsonify(message=str(e)), 401))
+
+  app.logger.debug('claims')
+  app.logger.debug(claims)
+  data = HomeActivities.run()
+  return data, 200
+```  
 
 - Add the bleow code in to `cognito_jwt_token.py` file
 
@@ -462,4 +481,6 @@ def extract_access_token(request_headers):
  ```
  HTTP_HEADER = "Authorization"
  ```
+ 
+ 
 
