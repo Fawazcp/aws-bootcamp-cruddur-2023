@@ -280,6 +280,10 @@ const onsubmit_confirm_code = async (event) => {
 
 ### Watch Week 3 [Congito JWT Server side Verify video on YouTube](Week 3 Congito JWT Server side Verify)
 
+**What is JWT token?**
+
+**JSON Web Token is an open industry standard used to share information between two entities, usually a client (like your app's frontend) and a server (your app's backend). They contain JSON objects which have the information that needs to be shared.**
+
 - Update headers in **`HomeFeedPage.js`**
 
 ```
