@@ -278,6 +278,41 @@ const onsubmit_confirm_code = async (event) => {
 
 ![image](https://user-images.githubusercontent.com/111639918/223835172-8fa90733-0710-45fe-8c99-30c2214c9086.png)
 
+### Watch Week 3 [Congito JWT Server side Verify video on YouTube](Week 3 Congito JWT Server side Verify)
+
+- Update headers in `HomeFeedPage.js`
+
+```
+      headers: {
+          Authorization: `Bearer ${localStorage.getItem("access_token")}`
+```
+
+- goto `app.py`
+
+```
+import sys
+```
+
+### Error
+
+![image](https://user-images.githubusercontent.com/111639918/224355880-dd429eb4-5684-422b-81fd-762efb26b52f.png)
+
+- Upadate the `CORS` in the `app.py` to resolve this issue
+
+```
+cors = CORS(
+  app, 
+  resources={r"/api/*": {"origins": origins}},
+  headers=['Content-Type', 'Authorization'], 
+  expose_headers='Authorization',
+  methods="OPTIONS,GET,HEAD,POST"
+)
+```
+
+- After updating the `CORS` my homepage is visible
+
+![image](https://user-images.githubusercontent.com/111639918/224357144-9ac99bcd-e8ba-4c9a-bb55-94063e0fea64.png)
+
 
 
 
