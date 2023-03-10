@@ -282,7 +282,7 @@ const onsubmit_confirm_code = async (event) => {
 
 📌**What is JWT token?**
 
-- **JSON Web Token is an open industry standard used to share information between two entities, usually a client (like your app's frontend) and a server (your app's backend). They contain JSON objects which have the information that needs to be shared.**
+👉 **JSON Web Token is an open industry standard used to share information between two entities, usually a client (like your app's frontend) and a server (your app's backend). They contain JSON objects which have the information that needs to be shared.**
 
 - Update headers in **`HomeFeedPage.js`**
 
@@ -518,4 +518,4 @@ Sign-out from the cruddur app and we cannot see the latest message we added
 
 
 
-#### Watch Week 3 -[ Exploring JWTs](https://youtu.be/nJjbI4BbasU)
+### Watch Week 3 -[ Exploring JWTs](https://youtu.be/nJjbI4BbasU)
