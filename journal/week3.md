@@ -482,4 +482,31 @@ def extract_access_token(request_headers):
  ```
  
  
+ - Add the below code in to **`home_activities.py`** file
 
+```
+    if cognito_user_id != None: 
+      extra_crud = {
+      'uuid': '248959df-3079-4947-b847-9e0892d1bab4',
+      'handle':  'Lore',
+      'message': 'This one is added in JWT Week 3 class ',
+      'created_at': (now - timedelta(hours=1)).isoformat(),
+      'expires_at': (now + timedelta(hours=12)).isoformat(),
+      'likes': 1042,
+      'replies': []
+    }
+      results.insert(0,extra_crud)
+  ```    
+ 
+<img width="658" alt="image" src="https://user-images.githubusercontent.com/111639918/224413520-56fea254-e746-4638-aacb-2be563de78e4.png">
+
+- Add the below code in **`ProfileInfo.js`** page
+
+```
+ localStorage.removeItem("access_token")
+```
+
+<img width="340" alt="image" src="https://user-images.githubusercontent.com/111639918/224415023-70ce1aea-ef24-4152-aa85-23db306f8003.png">
+
+
+# Watch Week 3 -[ Exploring JWTs](https://youtu.be/nJjbI4BbasU)
