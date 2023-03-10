@@ -3,7 +3,7 @@
 - Watched live stream video about [**Decentralized Authenication** on YouTube](https://www.youtube.com/live/9obl7rVgzJw?feature=share)
 
 - Login to [AWS managemnet console](https://us-east-1.console.aws.amazon.com/console/home?region=us-east-1) 
-- Open Gitpod and login to your AWS account using `aws cli`
+- Open Gitpod and login to your AWS account using **`aws cli`**
 -  Open **cognito** and Create user pool using AWS management console
 
 **Install AWS Amplify**
@@ -37,7 +37,7 @@ Amplify.configure({
 });
 ```
 
-- 👇Add this in your `docker-compose.yml` file
+- 👇Add this in your **`docker-compose.yml`** file
 
 ```
 REACT_APP_AWS_PROJECT_REGION: ""
@@ -186,7 +186,7 @@ import { Auth } from 'aws-amplify';
   ```
   
   
-  - Go to `ConfirmationPage.js` and update the below code
+  - Go to **`ConfirmationPage.js`** and update the below code
 
 ```
 import { Auth } from 'aws-amplify';
@@ -243,7 +243,7 @@ const onsubmit = async (event) => {
 
 ### Password Recovery
 
-- Go to `RecoverPage.js` and update the below code
+- Go to **`RecoverPage.js`** and update the below code
 
 ```
 import { Auth } from 'aws-amplify';
@@ -280,14 +280,14 @@ const onsubmit_confirm_code = async (event) => {
 
 ### Watch Week 3 [Congito JWT Server side Verify video on YouTube](Week 3 Congito JWT Server side Verify)
 
-- Update headers in `HomeFeedPage.js`
+- Update headers in **`HomeFeedPage.js`**
 
 ```
       headers: {
           Authorization: `Bearer ${localStorage.getItem("access_token")}`
 ```
 
-- goto `app.py`
+- goto **`app.py`** and add the below code
 
 ```
 import sys
@@ -309,7 +309,7 @@ cors = CORS(
 )
 ```
 
-- After updating the `CORS` my homepage is visible
+- After updating the **`CORS`** my homepage is visible
 
 ![image](https://user-images.githubusercontent.com/111639918/224357144-9ac99bcd-e8ba-4c9a-bb55-94063e0fea64.png)
 
@@ -464,7 +464,7 @@ def data_home():
   return data, 200
 ```  
 
-- Add the bleow code in to `cognito_jwt_token.py` file
+- Add the bleow code in to **`cognito_jwt_token.py`** file
 
 ```
 @classmethod
