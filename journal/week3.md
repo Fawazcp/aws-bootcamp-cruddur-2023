@@ -331,10 +331,14 @@ import requests
 from jose import jwk, jwt
 from jose.exceptions import JOSEError
 from jose.utils import base64url_decode
-from flask_awscognito.exceptions import FlaskAWSCognitoError, TokenVerifyError
 
+class FlaskAWSCognitoError(Exception):
+  pass
 
-class TokenService:
+class TokenVerifyError(Exception):
+  pass
+
+class CognitoTokenVerification:
     def __init__(self, user_pool_id, user_pool_client_id, region, request_client=None):
         self.region = region
         if not self.region:
@@ -429,6 +433,16 @@ class TokenService:
         self.claims = claims
    ```     
         
+  - Go to `app.py` and update the below code
 
+```
+from lib.cognito_token_verification import CognitoTokenVerification
+```
 
-  
+```
+cognito_token_verification = CognitoTokenVerification(
+  user_pool_id=os.getenv("AWS_COGNITO_USER_POOL_ID"),
+  user_pool_client_id=os.getenv("AWS_COGNITO_USER_POOL_CLIENT_ID"),
+  region=os.getenv("AWS_DEFAULT_REGION")
+)
+```
