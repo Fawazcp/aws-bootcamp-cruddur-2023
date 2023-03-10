@@ -322,10 +322,10 @@ AWS_COGNITO_USER_POOL_CLIENT_ID: "client-id"
 ```      
 
 - Create a new folder named `lib` inside `backend-flask`
-- Create a file named `cognito_token_verification.py` inside the `lib` folder
+- Create a file named `cognito_jwt_token.py` inside the `lib` folder
 - add the below code into this file
 
-```
+``` 
 import time
 import requests
 from jose import jwk, jwt
@@ -338,7 +338,7 @@ class FlaskAWSCognitoError(Exception):
 class TokenVerifyError(Exception):
   pass
 
-class CognitoTokenVerification:
+class CognitoJwtToken:
     def __init__(self, user_pool_id, user_pool_client_id, region, request_client=None):
         self.region = region
         if not self.region:
@@ -440,9 +440,26 @@ from lib.cognito_token_verification import CognitoTokenVerification
 ```
 
 ```
-cognito_token_verification = CognitoTokenVerification(
+cognito_jwt_token = CognitoJwtToken(
   user_pool_id=os.getenv("AWS_COGNITO_USER_POOL_ID"),
   user_pool_client_id=os.getenv("AWS_COGNITO_USER_POOL_CLIENT_ID"),
   region=os.getenv("AWS_DEFAULT_REGION")
 )
 ```
+
+- Add the bleow code in to `cognito_jwt_token.py` file
+
+```
+@classmethod
+def extract_access_token(request_headers):
+    access_token = None
+    auth_header = request_headers.get("Authorization")
+    if auth_header and " " in auth_header:
+        _, access_token = auth_header.split()
+    return access_token
+ ```
+ 
+ ```
+ HTTP_HEADER = "Authorization"
+ ```
+
