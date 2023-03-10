@@ -453,9 +453,7 @@ cognito_jwt_token = CognitoJwtToken(
 def data_home():
   access_token = CognitoJwtToken.extract_access_token(request.headers)
   try:
-    cognito_jwt_token.token_service.verify(access_token)
-    self.claims = self.token_service.claims
-    g.cognito_claims = self.claims
+    claims = cognito_jwt_token.token_service.verify(access_token)
   except TokenVerifyError as e:
       _ = request.data
       abort(make_response(jsonify(message=str(e)), 401))
