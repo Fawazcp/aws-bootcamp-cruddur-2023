@@ -278,7 +278,7 @@ const onsubmit_confirm_code = async (event) => {
 
 ![image](https://user-images.githubusercontent.com/111639918/223835172-8fa90733-0710-45fe-8c99-30c2214c9086.png)
 
-### Watch Week 3 [Congito JWT Server side Verify video on YouTube](Week 3 Congito JWT Server side Verify)
+### Watch Week 3 [Congito JWT Server side Verify video on YouTube](https://youtu.be/d079jccoG-M)
 
 📌**What is JWT token?**
 
